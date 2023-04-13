@@ -5,7 +5,7 @@ import  Layout  from "../components/Layout";
 const Home = () => {
   return(
     <Layout>
-      <div className="text-3xl underline">
+      <div>
         <StaticImage
           src='../images/children.png'
           width={1300}
