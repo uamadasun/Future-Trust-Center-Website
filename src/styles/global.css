@@ -1,16 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:wght@200;300;400&display=swap");
 
 * {
     box-sizing: border-box;
     color: #327D89;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2{
+    font-family: 'Archivo Black', sans-serif;
 }
 
 .activeLink {
     background-color: #EDB54C;
 }
 
+.nav-list{
+    letter-spacing: 2px;
+}
+
 .inactiveLink{
     color: black;
+}
+
+.hero-banner{
+    display: grid;
+    margin: 0px auto;
+    max-height: 500px;
+    width: 100%;
+    grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+
+
+}
+.bannerImg{
+    grid-area: 1/1/5/4;
+}
+
+.opaque{
+    grid-area:1/1/5/4;
+    background-color: hsla(0, 0%, 0%, .5);
+    z-index: 1;
+}
+
+.hero-banner h1{
+    grid-area: 2/1/3/span 4;
+    z-index: 1;
+    max-width: 100%;
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 800;
+    color: white;
+}
+
+.hero-banner h2{
+    grid-area: 3/1/4/span 4;
+    z-index: 1;
+    max-width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Nunito';
+}
+
+.hero-banner span{
+    color: #EDB54C;
+    font-family: 'Nunito';
+    
+}
+
+.intro, .reviews{
+    margin: 30px 30px;
+    text-align: center;
+}
+
+.intro p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+.reviews h2{
+    font-size: 3rem;
+    /* background-color: hsla(0, 0%, 0%, .5); */
+    color: #EDB54C;
+}
+
+@media (max-width: 738px) {
+    .hero-banner h1{
+        font-size: 4rem;
+    }
+
+    .hero-banner h2{
+        font-size: 2rem;
+    }
+    
 }

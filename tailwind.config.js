@@ -5,5 +5,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: ['gatsby-plugin-postcss'],
+  plugins: ['gatsby-plugin-postcss', require("daisyui")],
 }

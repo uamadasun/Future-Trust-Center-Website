@@ -4,10 +4,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'About Us', href: '#', current: false },
-  { name: 'FAQs', href: '#', current: false },
-  { name: 'Tuition & Openings', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'About Us', href: '/about', current: false },
+  { name: 'FAQs', href: '/faq', current: false },
+  { name: 'Tuition & Openings', href: '/tuition', current: false },
 ]
 
 function classNames(...classes) {
@@ -16,7 +16,7 @@ function classNames(...classes) {
 
 const NavBar = () => {
   return (
-    <Disclosure as="nav" className="bg-light-800">
+    <Disclosure as="nav" className="bg-light-800 nav-list">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -56,7 +56,7 @@ const NavBar = () => {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? ' text-white activeLink' : ' inactiveLink hover:bg-gray-700 hover:text-white',
+                          item.name === 'Tuition & Openings'? ' text-white activeLink' : ' inactiveLink hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -79,7 +79,7 @@ const NavBar = () => {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? ' activeLink text-white' : ' inactiveLink hover:bg-gray-700 hover:text-white',
+                    item.name === 'Tuition & Openings' ? ' activeLink text-white' : ' inactiveLink hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
