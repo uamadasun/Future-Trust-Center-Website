@@ -11,6 +11,18 @@
 
 h1, h2{
     font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 6rem;
+}
+
+p{
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    margin: 10px 30px;
+    text-align: center;
 }
 
 .activeLink {
@@ -64,10 +76,16 @@ h1, h2{
     font-family: 'Nunito';
 }
 
-.hero-banner span{
+span{
     color: #EDB54C;
     font-family: 'Nunito';
-    
+    font-weight: 700;
+}
+
+.classroomBanner{
+    min-width: 100%;
+    margin: 20px auto;
+
 }
 
 .intro, .reviews{
@@ -76,23 +94,42 @@ h1, h2{
 }
 
 .intro p{
-    font-size: 1.5rem;
     font-weight: 700;
     
 }
 
-.reviews h2{
+.reviews h2, .facility h2, .hours h2{
     font-size: 3rem;
     /* background-color: hsla(0, 0%, 0%, .5); */
     color: #EDB54C;
 }
 
+.facilityImages{
+    display: flex;
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.flexImage{
+    margin: 2px 2px;
+    max-width: 250px;
+    height: fit-content;
+
+}
+
 @media (max-width: 738px) {
-    .hero-banner h1{
+    .hero-banner h1, .aboutPage h1{
         font-size: 4rem;
     }
 
-    .hero-banner h2{
+    h2{
+        font-size: 2rem;
+    }
+
+    p{
         font-size: 2rem;
     }
     
